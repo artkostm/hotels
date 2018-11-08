@@ -93,10 +93,10 @@ Console output:
 log4j:WARN No such property [maxFileSize] in org.apache.log4j.DailyRollingFileAppender.                                                                                                                       
                                                                                                                                                                                                               
 Logging initialized using configuration in file:/etc/hive/2.6.5.0-292/0/hive-log4j.properties                                                                                                                 
-Query ID = root_20181108152320_b4800353-954c-4642-9bef-e5306b7de22f                                                                                                                                           
+Query ID = root_20181108154557_c07f3c69-eb94-40d0-b41b-43453646afdf                                                                                                                                           
 Total jobs = 1                                                                                                                                                                                                
 Launching Job 1 out of 1                                                                                                                                                                                      
-Status: Running (Executing on YARN cluster with App id application_1541682191139_0012)                                                                                                                        
+Status: Running (Executing on YARN cluster with App id application_1541682191139_0013)                                                                                                                        
                                                                                                                                                                                                               
 --------------------------------------------------------------------------------
         VERTICES      STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED
@@ -104,11 +104,11 @@ Status: Running (Executing on YARN cluster with App id application_1541682191139
 Map 1 ..........   SUCCEEDED      1          1        0        0       0       0
 Reducer 2 ......   SUCCEEDED      1          1        0        0       0       0                                                                                                                              
 --------------------------------------------------------------------------------
-VERTICES: 02/02  [==========================>>] 100%  ELAPSED TIME: 290.40 s   
+VERTICES: 02/02  [==========================>>] 100%  ELAPSED TIME: 55.14 s    
 --------------------------------------------------------------------------------
 OK                                                                                                                                                                                                            
 390                                                                                                                                                                                                           
-Time taken: 306.918 seconds, Fetched: 1 row(s)                                                                                                                                                                
+Time taken: 80.179 seconds, Fetched: 1 row(s)                                                                                                                                                                                                                                                                                                                                
 ```
 
 ![The longest period of stay of couples with children](./img/longest_period_of_stay.png "The longest period of stay of couples with children")
