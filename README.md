@@ -7,6 +7,12 @@
 Console output:
 
 ```shell
+[root@sandbox-hdp ~]# hive -f create_hotels_table.hql                                                                                                                                                         
+log4j:WARN No such property [maxFileSize] in org.apache.log4j.DailyRollingFileAppender.                                                                                                                       
+                                                                                                                                                                                                              
+Logging initialized using configuration in file:/etc/hive/2.6.5.0-292/0/hive-log4j.properties                                                                                                                 
+OK                                                                                                                                                                                                            
+Time taken: 4.625 seconds                                                                                                                                                                                     
 ```
 
 ![Created tables](./img/created_tables.png "Created tables")
