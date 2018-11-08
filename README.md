@@ -33,7 +33,7 @@ Load train.csv.gz into hdfs by running ```hdfs dfs -put train.csv.gz /tmp/test/h
 
 ### To create the tables above run:
 
-```hive -f ....hql```
+```hive -f create_hotels_table.hql```
 
 Console output:
 
@@ -50,7 +50,35 @@ Time taken: 4.625 seconds
 
 ### To calculate Top 3 most popular countries where booking is successful (booking = 1):
 
-```hive -f ....hql```
+```hive -f select_top3_countries_with_succ_booking.hql```
+
+Console output:
+
+```shell                                                                                                                                                                                  
+[root@sandbox-hdp ~]# hive -f select_top3_countries_with_succ_booking.hql                                                                                                                                                                        
+log4j:WARN No such property [maxFileSize] in org.apache.log4j.DailyRollingFileAppender.                                                                                                                       
+                                                                                                                                                                                                              
+Logging initialized using configuration in file:/etc/hive/2.6.5.0-292/0/hive-log4j.properties                                                                                                                 
+Query ID = root_20181108145545_f1594bb5-c096-4898-8328-96b9af872600                                                                                                                                           
+Total jobs = 1                                                                                                                                                                                                
+Launching Job 1 out of 1                                                                                                                                                                                      
+Status: Running (Executing on YARN cluster with App id application_1541682191139_0007)                                                                                                                        
+                                                                                                                                                                                                              
+--------------------------------------------------------------------------------
+        VERTICES      STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED
+--------------------------------------------------------------------------------
+Map 1 ..........   SUCCEEDED      1          1        0        0       0       0
+Reducer 2 ......   SUCCEEDED      1          1        0        0       0       0                                                                                                                              
+Reducer 3 ......   SUCCEEDED      1          1        0        0       0       0                                                                                                                              
+--------------------------------------------------------------------------------
+VERTICES: 03/03  [==========================>>] 100%  ELAPSED TIME: 53.31 s    
+--------------------------------------------------------------------------------
+OK                                                                                                                                                                                                            
+50      1616055                                                                                                                                                                                               
+198     197228                                                                                                                                                                                                
+70      102651                                                                                                                                                                                                
+Time taken: 60.347 seconds, Fetched: 3 row(s)                                                                                                                                                                 
+```
 
 ![Top 3 most popular countries where booking is successful](./img/top3_countries_with_succ_booking.png "Top 3 most popular countries where booking is successful")
 
