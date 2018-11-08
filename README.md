@@ -52,7 +52,7 @@ Time taken: 4.625 seconds
 
 ```hive -f ....hql```
 
-![Top 3 most popular countries where booking is successful](./img/top3_countries_succ_booking.png "Top 3 most popular countries where booking is successful")
+![Top 3 most popular countries where booking is successful](./img/top3_countries_with_succ_booking.png "Top 3 most popular countries where booking is successful")
 
 ### To calculate the longest period of stay of couples with children:
 
