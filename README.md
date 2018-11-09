@@ -34,7 +34,7 @@ Load train.csv.gz into hdfs by running ```hdfs dfs -put train.csv.gz /tmp/test/h
 ### To create the tables above run:
 
 ```shell
-hive --hiveconf -d HOTELS_TABLE_NAME=hotels \
+hive -d HOTELS_TABLE_NAME=hotels \
 -d HOTELS_FILE_LOCATION=/tmp/test/hotels \
 -f create_hotels_table.hql
 ```
@@ -42,7 +42,7 @@ hive --hiveconf -d HOTELS_TABLE_NAME=hotels \
 Console output:
 
 ```shell
-[root@sandbox-hdp ~]# hive --hiveconf -d HOTELS_TABLE_NAME=hotels \
+[root@sandbox-hdp ~]# hive -d HOTELS_TABLE_NAME=hotels \
 -d HOTELS_FILE_LOCATION=/tmp/test/hotels \
 -f create_hotels_table.hql                                                                                                                                                         
 log4j:WARN No such property [maxFileSize] in org.apache.log4j.DailyRollingFileAppender.                                                                                                                       
@@ -56,15 +56,13 @@ Time taken: 4.625 seconds
 
 ### To calculate Top 3 most popular countries where booking is successful (booking = 1):
 
-```hive --hiveconf -d HOTELS_TABLE_NAME=hotels -f select_top3_countries_with_succ_booking.hql```
+```hive -d HOTELS_TABLE_NAME=hotels -f select_top3_countries_with_succ_booking.hql```
 
 Console output:
 
 ```shell                                                                                                                                                                                  
-[root@sandbox-hdp ~]# hive --hiveconf -d HOTELS_TABLE_NAME=hotels -f select_top3_countries_with_succ_booking.hql                                                                                                                                                                        
-log4j:WARN No such property [maxFileSize] in org.apache.log4j.DailyRollingFileAppender.                                                                                                                       
-                                                                                                                                                                                                              
-Logging initialized using configuration in file:/etc/hive/2.6.5.0-292/0/hive-log4j.properties                                                                                                                 
+[root@sandbox-hdp ~]# hive -d HOTELS_TABLE_NAME=hotels -f select_top3_countries_with_succ_booking.hql                                                                                                                                                                        
+                                                                                                               
 Query ID = root_20181108145545_f1594bb5-c096-4898-8328-96b9af872600                                                                                                                                           
 Total jobs = 1                                                                                                                                                                                                
 Launching Job 1 out of 1                                                                                                                                                                                      
@@ -90,15 +88,13 @@ Time taken: 60.347 seconds, Fetched: 3 row(s)
 
 ### To calculate the longest period of stay of couples with children:
 
-```hive --hiveconf -d HOTELS_TABLE_NAME=hotels -f select_longest_period_of_stay.hql```
+```hive -d HOTELS_TABLE_NAME=hotels -f select_longest_period_of_stay.hql```
 
 Console output:
 
 ```shell
-[root@sandbox-hdp ~]# hive --hiveconf -d HOTELS_TABLE_NAME=hotels -f select_longest_period_of_stay.hql                                                                                                                                                                        
-log4j:WARN No such property [maxFileSize] in org.apache.log4j.DailyRollingFileAppender.                                                                                                                       
-                                                                                                                                                                                                              
-Logging initialized using configuration in file:/etc/hive/2.6.5.0-292/0/hive-log4j.properties                                                                                                                 
+[root@sandbox-hdp ~]# hive -d HOTELS_TABLE_NAME=hotels -f select_longest_period_of_stay.hql                                                                                                                                                                                                                                                                                            
+                                                                                                                                 
 Query ID = root_20181108154557_c07f3c69-eb94-40d0-b41b-43453646afdf                                                                                                                                           
 Total jobs = 1                                                                                                                                                                                                
 Launching Job 1 out of 1                                                                                                                                                                                      
@@ -125,15 +121,13 @@ Time taken: 80.179 seconds, Fetched: 1 row(s)
 
 > Not booked means column booked = 0
 
-```hive --hiveconf -d HOTELS_TABLE_NAME=hotels -f select_top3_hotels_from_clicks.hql```
+```hive -d HOTELS_TABLE_NAME=hotels -f select_top3_hotels_from_clicks.hql```
 
 Console output:
 
 ```shell
-[root@sandbox-hdp ~]# hive --hiveconf -d HOTELS_TABLE_NAME=hotels -f select_top3_hotels_from_clicks.hql                                                                                                                                                                       
-log4j:WARN No such property [maxFileSize] in org.apache.log4j.DailyRollingFileAppender.                                                                                                                       
-                                                                                                                                                                                                              
-Logging initialized using configuration in file:/etc/hive/2.6.5.0-292/0/hive-log4j.properties                                                                                                                 
+[root@sandbox-hdp ~]# hive -d HOTELS_TABLE_NAME=hotels -f select_top3_hotels_from_clicks.hql                                                                                                                                                                       
+                                                                                                               
 Query ID = root_20181109120929_ad7ac3ec-9fe3-424b-90fe-fbb4dd99c47b                                                                                                                                           
 Total jobs = 1                                                                                                                                                                                                
 Launching Job 1 out of 1                                                                                                                                                                                      
