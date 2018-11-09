@@ -1,3 +1,5 @@
+SET hive.cli.print.header=true;
+
 SELECT * FROM (
   SELECT 
     h.hotel_continent,
