@@ -1,3 +1,5 @@
+SET hive.cli.print.header=true;
+
 SELECT 
 	MAX(datediff(h.srch_co, h.srch_ci)) days 
 FROM ${HOTELS_TABLE_NAME} h 
