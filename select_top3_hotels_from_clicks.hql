@@ -4,7 +4,7 @@ SELECT * FROM (
     h.hotel_country,
     h.hotel_market,
 	  count(*) cnt
-  FROM hotels h 
+  FROM ${HOTELS_TABLE_NAME} h 
   WHERE h.is_booking = 0
   GROUP BY 
     h.hotel_continent,
