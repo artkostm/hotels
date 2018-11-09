@@ -1,3 +1,5 @@
+SET hive.cli.print.header=true;
+
 SELECT 
   c.country,
   c.num 
