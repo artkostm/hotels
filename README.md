@@ -119,6 +119,35 @@ Time taken: 80.179 seconds, Fetched: 1 row(s)
 
 > Not booked means column booked = 0
 
-```hive -f ....hql```
+```hive -f select_top3_hotels_from_clicks.hql```
 
-![To calculate top 3 most popular hotels which were not booked](./img/created_tables.png "To calculate top 3 most popular hotels which were not booked")
+Console output:
+
+```shell
+[root@sandbox-hdp ~]# hive -f select_top3_hotels_from_clicks.hql                                                                                                                                                                        
+log4j:WARN No such property [maxFileSize] in org.apache.log4j.DailyRollingFileAppender.                                                                                                                       
+                                                                                                                                                                                                              
+Logging initialized using configuration in file:/etc/hive/2.6.5.0-292/0/hive-log4j.properties                                                                                                                 
+Query ID = root_20181109120929_ad7ac3ec-9fe3-424b-90fe-fbb4dd99c47b                                                                                                                                           
+Total jobs = 1                                                                                                                                                                                                
+Launching Job 1 out of 1                                                                                                                                                                                      
+Status: Running (Executing on YARN cluster with App id application_1541682191139_0017)                                                                                                                        
+                                                                                                                                                                                                              
+--------------------------------------------------------------------------------
+        VERTICES      STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED
+--------------------------------------------------------------------------------
+Map 1 ..........   SUCCEEDED      1          1        0        0       0       0
+Reducer 2 ......   SUCCEEDED      1          1        0        0       0       0                                                                                                                              
+Reducer 3 ......   SUCCEEDED      1          1        0        0       0       0                                                                                                                              
+Reducer 4 ......   SUCCEEDED      1          1        0        0       0       0                                                                                                                              
+--------------------------------------------------------------------------------
+VERTICES: 04/04  [==========================>>] 100%  ELAPSED TIME: 45.55 s   
+--------------------------------------------------------------------------------
+OK                                                                                                                                                                                                            
+2       50      628     1640731                                                                                                                                                                               
+2       50      675     1490187                                                                                                                                                                               
+2       50      682     809776                                                                                                                                                                                
+Time taken: 53.434 seconds, Fetched: 3 row(s)                                                                                                                                                                
+```
+
+![To calculate top 3 most popular hotels which were not booked](./img/top3_hotels_from_clicks.png "To calculate top 3 most popular hotels which were not booked")
