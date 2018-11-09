@@ -45,9 +45,7 @@ Console output:
 [root@sandbox-hdp ~]# hive -d HOTELS_TABLE_NAME=hotels \
 -d HOTELS_FILE_LOCATION=/tmp/test/hotels \
 -f create_hotels_table.hql                                                                                                                                                         
-log4j:WARN No such property [maxFileSize] in org.apache.log4j.DailyRollingFileAppender.                                                                                                                       
-                                                                                                                                                                                                              
-Logging initialized using configuration in file:/etc/hive/2.6.5.0-292/0/hive-log4j.properties                                                                                                                 
+                                                                                                               
 OK                                                                                                                                                                                                            
 Time taken: 4.625 seconds                                                                                                                                                                                     
 ```
@@ -151,3 +149,34 @@ Time taken: 53.434 seconds, Fetched: 3 row(s)
 ```
 
 ![To calculate top 3 most popular hotels which were not booked](./img/top3_hotels_from_clicks.png "To calculate top 3 most popular hotels which were not booked")
+
+### To run the tasks sequentially
+
+```./run.sh hotels /tmp/test/hotels```, hotels - the name of the table, /tmp/test/hotels - hdfs location where train.csv.gz is stored. 
+
+Console output:
+
+```shell
+[root@sandbox-hdp ~]# ./run.sh hotels /tmp/test/hotels                                                                                                                                                     
+Task #1 is running                                                                                                                                                                                            
+Creating tables...                                                                                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                                                                                              
+OK                                                                                                                                                                                                            
+Time taken: 3.614 seconds                                                                                                                                                                                                                                                                                                                                                                          
+                                                                                                                     
+c.country       c.num                                                                                                                                                                                         
+50      1616055                                                                                                                                                                                               
+198     197228                                                                                                                                                                                                
+70      102651                                                                                                                                                                                                
+Task #2 is running                                                                                                                                                                                                                                                                                                                  
+days                                                                                                                                                                                                          
+390                                                                                                                                                                                                           
+Task #3 is running                                                                                                                                                                                                                                                                                                                  
+hotel_continent  hotel_country    hotel_market     cnt                                                                                                                            
+2       50      628     1640731                                                                                                                                                                               
+2       50      675     1490187                                                                                                                                                                               
+2       50      682     809776                                                                                                                                                                                
+Done                                                                                                                                                                                                          
+```
+
+
