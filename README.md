@@ -150,7 +150,7 @@ Time taken: 53.434 seconds, Fetched: 3 row(s)
 
 ![To calculate top 3 most popular hotels which were not booked](./img/top3_hotels_from_clicks.png "To calculate top 3 most popular hotels which were not booked")
 
-### To run the tasks sequentially
+### To run the queries sequentially
 
 ```./run.sh hotels /tmp/test/hotels```, hotels - the name of the table, /tmp/test/hotels - hdfs location where train.csv.gz is stored. 
 
@@ -158,7 +158,7 @@ Console output:
 
 ```shell
 [root@sandbox-hdp ~]# ./run.sh hotels /tmp/test/hotels                                                                                                                                                     
-Task #1 is running                                                                                                                                                                                            
+Query #1 is running                                                                                                                                                                                            
 Creating tables...                                                                                                                                                                                                                                                                                                                  
                                                                                                                                                                                                                                                                                                                               
 OK                                                                                                                                                                                                            
@@ -168,10 +168,10 @@ c.country       c.num
 50      1616055                                                                                                                                                                                               
 198     197228                                                                                                                                                                                                
 70      102651                                                                                                                                                                                                
-Task #2 is running                                                                                                                                                                                                                                                                                                                  
+Query #2 is running                                                                                                                                                                                                                                                                                                                  
 days                                                                                                                                                                                                          
 390                                                                                                                                                                                                           
-Task #3 is running                                                                                                                                                                                                                                                                                                                  
+Query #3 is running                                                                                                                                                                                                                                                                                                                  
 hotel_continent  hotel_country    hotel_market     cnt                                                                                                                            
 2       50      628     1640731                                                                                                                                                                               
 2       50      675     1490187                                                                                                                                                                               
