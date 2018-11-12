@@ -1,4 +1,4 @@
-echo "Task #1 is running"
+echo "Query #1 is running"
 
 echo "Creating tables..."
 
@@ -12,12 +12,12 @@ hive -d HOTELS_TABLE_NAME=${HOTELS_TABLE_NAME} \
 hive -d HOTELS_TABLE_NAME=${HOTELS_TABLE_NAME} \
 -S -f select_top3_countries_with_succ_booking.hql
 
-echo "Task #2 is running"
+echo "Query #2 is running"
 
 hive -d HOTELS_TABLE_NAME=${HOTELS_TABLE_NAME} \
 -S -f select_longest_period_of_stay.hql
 
-echo "Task #3 is running"
+echo "Query #3 is running"
 
 hive -d HOTELS_TABLE_NAME=${HOTELS_TABLE_NAME} \
 -S -f select_top3_hotels_from_clicks.hql
